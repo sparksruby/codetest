@@ -65,17 +65,19 @@ export const CartScreen: React.FC<CartScreenProps> = ({
               ))}
               {total >= 150 && <DiscountBanner />}
             </div>
-       <OrderSummary
-  baseTotal={total}
-  discount={discount}
-  shipping={0} 
-  couponApplied={couponApplied}
-  cartItemsCount={cartItems.length}
-  setCouponApplied={(amount) => console.log("Coupon applied:", amount)}
-   estimatedDelivery="01 Feb, 2023"
-  onAction={() => navigate("/order")}
-  actionButtonLabel="Checkout"
-/>
+              <div className="w-full lg:sticky lg:top-20">
+            <OrderSummary
+              baseTotal={total}
+              discount={discount}
+              shipping={0}
+              couponApplied={couponApplied}
+              cartItemsCount={cartItems.length}
+              setCouponApplied={(amount) => console.log("Coupon applied:", amount)}
+              estimatedDelivery="01 Feb, 2023"
+              onAction={() => navigate("/order")}
+              actionButtonLabel="Checkout"
+            />
+          </div>
 
           </div>
         )}

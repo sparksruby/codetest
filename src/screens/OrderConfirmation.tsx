@@ -49,18 +49,19 @@ export const OrderConfirmationScreen: React.FC<OrderConfirmationScreenProps> = (
           <div className="lg:col-span-2">
             <OrderDetails orderInfo={orderInfo} orderNumber={orderNumber} />
           </div>
-       <OrderSummary
-  baseTotal={baseTotal}
-  discount={discount}
-  shipping={shipping}
-  couponApplied={couponApplied}
-  cartItemsCount={getCartItemCount()}
-  onAction={handleBackToShop}
-   estimatedDelivery="01 Feb, 2023"
-  actionButtonLabel="Back to Shop"
-  showCouponInput={false} // no coupon input after order
-
-/>
+           <div className="w-full">
+              <OrderSummary
+                baseTotal={baseTotal}
+                discount={discount}
+                shipping={shipping}
+                couponApplied={couponApplied}
+                cartItemsCount={getCartItemCount()}
+                onAction={handleBackToShop}
+                estimatedDelivery="01 Feb, 2023"
+                actionButtonLabel="Back to Shop"
+                showCouponInput={false}
+              />
+            </div>  
 
         </div>
       </div>
