@@ -4,7 +4,7 @@ import { CartItem } from '../App';
 import { useNavigate } from 'react-router-dom';
 import { CartItemRow } from '../components/ui/Cart/CartItemRow';
 import { DiscountBanner } from '../components/ui/Cart/DiscountBanner';
-import { OrderSummary } from '../components/ui/Cart/OrderSummary';
+import { OrderSummary } from '../components/ui/OrderSummary';
 
 
 interface CartScreenProps {
@@ -29,7 +29,7 @@ export const CartScreen: React.FC<CartScreenProps> = ({
   const total = getCartTotal();
   const discount = total >= 150 ? total * 0.1 : 0;
   const couponApplied = 0;
-  const finalTotal = total - discount - couponApplied;
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -65,14 +65,17 @@ export const CartScreen: React.FC<CartScreenProps> = ({
               ))}
               {total >= 150 && <DiscountBanner />}
             </div>
-            <OrderSummary
-              total={total}
-              discount={discount}
-              couponApplied={couponApplied}
-              finalTotal={finalTotal}
-              cartItemsCount={cartItems.length}
-              onCheckout={() => navigate('/order')}
-            />
+       <OrderSummary
+  baseTotal={total}
+  discount={discount}
+  shipping={0} // Cart usually doesn't calculate shipping yet
+  couponApplied={couponApplied}
+  cartItemsCount={cartItems.length}
+  setCouponApplied={(amount) => console.log("Coupon applied:", amount)}
+  onAction={() => navigate("/order")}
+  actionButtonLabel="Checkout"
+/>
+
           </div>
         )}
       </div>

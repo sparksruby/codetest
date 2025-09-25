@@ -32,7 +32,7 @@ export const OrderConfirmationScreen: React.FC<OrderConfirmationScreenProps> = (
   const navigate = useNavigate();
   const baseTotal = getCartTotal();
   const shipping = orderInfo.shipmentMethod === 'paid' ? 8.5 : 0;
-  const finalTotal = baseTotal - discount + shipping - couponApplied;
+
 
   const handleBackToShop = () => {
     resetApp();
@@ -49,14 +49,17 @@ export const OrderConfirmationScreen: React.FC<OrderConfirmationScreenProps> = (
           <div className="lg:col-span-2">
             <OrderDetails orderInfo={orderInfo} orderNumber={orderNumber} />
           </div>
-          <OrderSummary
-            baseTotal={baseTotal}
-            discount={discount}
-            shipping={shipping}
-            couponApplied={couponApplied}
-            finalTotal={finalTotal}
-            onBackToShop={handleBackToShop}
-          />
+       <OrderSummary
+  baseTotal={baseTotal}
+  discount={discount}
+  shipping={shipping}
+  couponApplied={couponApplied}
+  cartItemsCount={getCartItemCount()}
+  onAction={handleBackToShop}
+  actionButtonLabel="Back to Shop"
+  showCouponInput={false} // no coupon input after order
+/>
+
         </div>
       </div>
     </div>

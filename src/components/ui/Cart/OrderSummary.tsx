@@ -27,11 +27,12 @@ export const OrderSummary: React.FC<OrderSummaryProps> = ({
       </div>
       <div className="flex justify-between">
         <span>Discount</span>
-        <span className="text-green-600">-${discount.toFixed(2)}</span>
+        <span className="">-${discount.toFixed(2)}</span>
       </div>
       <div className="flex justify-between">
         <span>Shipping</span>
-        <span className="text-green-600">Free</span>
+        <span className="text-[#3AA39F]">Free</span>
+
       </div>
       <div className="flex justify-between">
         <span>Coupon Applied</span>
