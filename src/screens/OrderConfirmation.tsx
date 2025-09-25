@@ -1,8 +1,8 @@
 import React from 'react';
 import { Header } from '../components/ui/Header';
-import { ToastMessage } from '../components/ui/ToastMessage';
-import { SectionTitle } from '../components/ui/SectionTitle';
-import { OrderDetails } from '../components/ui/OrderDetails';
+import { ToastMessage } from '../components/ui/OrderConfirm/ToastMessage';
+import { SectionTitle } from '../components/ui/OrderConfirm/SectionTitle';
+import { OrderDetails } from '../components/ui/OrderConfirm/OrderDetails';
 import { OrderSummary } from '../components/ui/OrderSummary';
 import { OrderInfo } from '../App';
 import { useNavigate } from 'react-router-dom';

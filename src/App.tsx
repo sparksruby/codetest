@@ -112,7 +112,6 @@ export default function App() {
         <Route path="/cart" element={<CartScreen {...commonProps} />} />
         <Route path="/order" element={<OrderScreen {...commonProps} />} />
         <Route path="/confirmation" element={<OrderConfirmationScreen {...commonProps} />} />
-        {/* Redirect unknown paths to product screen */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

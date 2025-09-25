@@ -1,5 +1,5 @@
 import React from "react";
-import { OrderInfo } from "../../App";
+import { OrderInfo } from "../../../App";
 
 export const OrderDetails: React.FC<{ orderInfo: OrderInfo; orderNumber: string }> = ({ orderInfo, orderNumber }) => (
   <div className="space-y-6">
