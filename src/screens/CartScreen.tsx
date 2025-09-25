@@ -72,6 +72,7 @@ export const CartScreen: React.FC<CartScreenProps> = ({
   couponApplied={couponApplied}
   cartItemsCount={cartItems.length}
   setCouponApplied={(amount) => console.log("Coupon applied:", amount)}
+   estimatedDelivery="Oct 1 - Oct 5"
   onAction={() => navigate("/order")}
   actionButtonLabel="Checkout"
 />

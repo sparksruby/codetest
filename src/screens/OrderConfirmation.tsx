@@ -56,8 +56,10 @@ export const OrderConfirmationScreen: React.FC<OrderConfirmationScreenProps> = (
   couponApplied={couponApplied}
   cartItemsCount={getCartItemCount()}
   onAction={handleBackToShop}
+   estimatedDelivery="Oct 1 - Oct 5"
   actionButtonLabel="Back to Shop"
   showCouponInput={false} // no coupon input after order
+
 />
 
         </div>

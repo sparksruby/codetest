@@ -98,6 +98,7 @@ export const OrderScreen: React.FC<OrderScreenProps> = ({
   couponApplied={couponApplied}
   setCouponApplied={setCouponApplied}
   cartItemsCount={getCartItemCount()}
+   estimatedDelivery="Oct 1 - Oct 5"
   onAction={handleBuy}
   actionButtonLabel="Buy Now"
 />

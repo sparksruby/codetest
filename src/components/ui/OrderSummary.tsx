@@ -6,6 +6,7 @@ interface OrderSummaryProps {
   shipping?: number;
   couponApplied?: number;
   cartItemsCount?: number;
+  estimatedDelivery?: string; // New prop
 
   // Optional actions
   onAction?: () => void; // generic button action
@@ -22,6 +23,7 @@ export const OrderSummary: React.FC<OrderSummaryProps> = ({
   shipping = 0,
   couponApplied = 0,
   cartItemsCount,
+  estimatedDelivery,
   onAction,
   actionButtonLabel,
   showCouponInput = true,
@@ -34,7 +36,6 @@ export const OrderSummary: React.FC<OrderSummaryProps> = ({
   const handleApplyCoupon = () => {
     if (!setCouponApplied) return;
 
-    // Example: simple coupon logic
     if (coupon.trim().toLowerCase() === "save10") {
       setCouponApplied(10);
     } else {
@@ -68,6 +69,12 @@ export const OrderSummary: React.FC<OrderSummaryProps> = ({
           <span>Coupon Applied</span>
           <span>-${couponApplied.toFixed(2)}</span>
         </div>
+        {estimatedDelivery && (
+          <div className="flex justify-between text-gray-600">
+            <span>Estimated Delivery By</span>
+            <span>{estimatedDelivery}</span>
+          </div>
+        )}
         <hr />
         <div className="flex justify-between font-semibold text-lg">
           <span>TOTAL</span>
