@@ -68,11 +68,11 @@ export const CartScreen: React.FC<CartScreenProps> = ({
        <OrderSummary
   baseTotal={total}
   discount={discount}
-  shipping={0} // Cart usually doesn't calculate shipping yet
+  shipping={0} 
   couponApplied={couponApplied}
   cartItemsCount={cartItems.length}
   setCouponApplied={(amount) => console.log("Coupon applied:", amount)}
-   estimatedDelivery="Oct 1 - Oct 5"
+   estimatedDelivery="01 Feb, 2023"
   onAction={() => navigate("/order")}
   actionButtonLabel="Checkout"
 />

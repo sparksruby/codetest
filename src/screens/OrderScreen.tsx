@@ -91,17 +91,17 @@ export const OrderScreen: React.FC<OrderScreenProps> = ({
             <PaymentMethod orderInfo={orderInfo} setOrderInfo={setOrderInfo} />
           </div>
 
-        <OrderSummary
-  baseTotal={baseTotal}
-  discount={discount}
-  shipping={shipping}
-  couponApplied={couponApplied}
-  setCouponApplied={setCouponApplied}
-  cartItemsCount={getCartItemCount()}
-   estimatedDelivery="Oct 1 - Oct 5"
-  onAction={handleBuy}
-  actionButtonLabel="Buy Now"
-/>
+          <OrderSummary
+            baseTotal={baseTotal}
+            discount={discount}
+            shipping={shipping}
+            couponApplied={couponApplied}
+            setCouponApplied={setCouponApplied}
+            cartItemsCount={getCartItemCount()}
+            estimatedDelivery="01 Feb, 2023"
+            onAction={handleBuy}
+            actionButtonLabel="Buy Now"
+          />
 
         </div>
       </div>
