@@ -18,10 +18,9 @@ Implemented a small e-commerce workflow including:
 - **Order Screen:** Fill personal, shipping, and payment details with validation.  
 - **Order Confirmation Screen:** View order summary and final totals.  
 
-## Screenshots
-*(Optional: Add screenshots of each screen here for visual reference)*
+
 
 ## How to Run
-1. Clone the repository  
-   ```bash
-   git clone <repo-url>
+1. npm install
+
+    npm run dev
